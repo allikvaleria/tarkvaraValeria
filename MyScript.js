@@ -74,3 +74,4 @@ function tervitus2()
     vastus.innerHTML='Täna on veebirakendus tund' ;
     vastus.style.color='DarkBlue';
 }
+ku
