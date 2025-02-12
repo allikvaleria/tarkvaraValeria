@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+    <meta charset="UTF-8">
+    <title>Vormist lugemine</title>
+  <script src="MyScript.js"></script>
+</head>
+<body>
+<h1>JS : Vormist lugemine</h1>
+<form name="vorm1">
+  <label for="nimi">Sisesta oma nimi : </label>
+  <input type="text" name="nimi" id="nimi" placeholder="Eesnimi" oninput="tervitus()">
+
+  <br>
+
+  <strong>Vali oma rühm:</strong>
+    <input type="radio" name="ryhm" id="tarpv23" value="TARpv23" onclick="tervitus()">
+    <label for="tarpv23">TARpv23</label><br>
+
+    <input type="radio" name="ryhm" id="tarpv24" value="TARpv24" onclick="tervitus()">
+    <label for="tarpv24">TARpv24</label><br>
+
+    <input type="radio" name="ryhm" id="logitpv23" value="LOGITpv23" onclick="tervitus()">
+    <label for="logitpv23">LOGITpv23</label><br>
+
+    <input type="radio" name="ryhm" id="logitpv24" value="LOGITpv24" onclick="tervitus()">
+    <label for="logitpv24">LOGITpv24</label>
+
+  <br>
+
+  <strong>Mis keeled sa oled õppinud?</strong>
+    <input type="checkbox" name="python" id="python" value="python" onclick="tervitus()">
+    <label for="python">Python</label><br>
+
+    <input type="checkbox" name="html" id="html" value="html" onclick="tervitus()">
+    <label for="html">HTML</label><br>
+
+    <input type="checkbox" name="csharp" id="csharp" value="csharp" onclick="tervitus()">
+    <label for="csharp">C Sharp#</label><br>
+
+    <input type="checkbox" name="java" id="java" value="java" onclick="tervitus()">
+    <label for="java">Java</label><br>
+
+    <input type="checkbox" name="css" id="css" value="css" onclick="tervitus()">
+    <label for="css">CSS</label>
+
+  <br>
+  <input type="button" value="OK" onclick="tervitus2()">
+  <div id="vastus"></div>
+  <br>
+
+
+</form>
+
+</body>
+</html>
