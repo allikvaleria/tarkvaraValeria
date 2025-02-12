@@ -1,77 +1,78 @@
-function tervitus()
-{
-    let vastus=document.getElementById('vastus');
-    let nimi=document.getElementById('nimi');
-//radio-nupude nimed
-    let tarpv23=document.getElementById('tarpv23');
-    let tarpv24=document.getElementById('tarpv24');
-    let logitpv23=document.getElementById('logitpv23');
-    let logitpv24=document.getElementById('logitpv24');
 
-//finktsiooni põhitegevus
-    var ryhm=null;
-    if(tarpv23.checked)
-    {
-        var ryhm=tarpv23.value;
+function nimi(){
+    const vastus = document.getElementById('nimi-tabelist-container');
+    const input = document.getElementById('nimi');
+    if(input.value === ""){
+        alert("sisesta midagi");
+        return;
     }
-    else if(tarpv24.checked)
-    {
-        var ryhm=tarpv24.value;
-    }
-    else if(logitpv23.checked)
-    {
-        var ryhm=logitpv23.value;
-    }
-    else if(logitpv24.checked)
-    {
-        var ryhm=logitpv24.value;
-    }
-    else
-    {
-        ryhm=null;
-    }
-//check-box valik
-    let python=document.getElementById('python');
-    let html=document.getElementById('html');
-    let csharp=document.getElementById('csharp');
-    let java=document.getElementById('java');
-    let css=document.getElementById('css');
-
-    var keeled="";
-    if(python.checked)
-    {
-        keeled+=python.value ;
-    }
-    if(html.checked)
-    {
-        keeled+=html.value ;
-    }
-    if(csharp.checked)
-    {
-        keeled+=csharp.value ;
-    }
-    if(java.checked)
-    {
-        keeled+=java.value ;
-    }
-    if(css.checked)
-    {
-        keeled+=css.value ;
-    }
-    if(keeled=="")
-    {
-        keeled="Sa ei oska keelt"
-    }
-    if(keeled>=0){
-        keeled+= ' ,';
-    }
-    vastus.innerHTML='Tere, ' + nimi.value + '<br>' + 'sa oled ' + ryhm + ' rühmas.' + '<br>' + 'Valitud keeled on - ' + keeled;
-    vastus.style.color='DarkMagenta';
+    vastus.innerHTML=`tere, ${input.value}`;
 }
-function tervitus2()
-{
-    let vastus=document.getElementById('vastus');
-    vastus.innerHTML='Täna on veebirakendus tund' ;
-    vastus.style.color='DarkBlue';
+function ruhm(){
+    const vastus = document.getElementById('ruhm-tabelist-container');
+    const radiobuttons = document.getElementsByName('ryhm');
+    let access = true;
+    radiobuttons.forEach(radiobutton => {
+        console.log(radiobutton);
+        if (radiobutton.checked){
+            vastus.innerText =  `sinu rühm on, ${radiobutton.value}`;
+            access = false;
+        }
+    })
+    if(access){
+        alert("Vali oma ryhm");
+    }
 }
+function keeled(){
+    const checkboxes = document.getElementsByName('keel');
+    const vastus = document.getElementById('keel-tabelist-container');
+    let text = "Sa oled õpinnud -"
+    checkboxes.forEach(checkbox => {
+        if (checkbox.checked){
+            text += `${checkbox.value}, `;
+        }
+    })
+    vastus.innerHTML=text;
+}
+function date(){
+    const input = document.getElementById('input-date');
+    const vastus = document.getElementById('sunnipaev-tabelist-container');
+    vastus.innerText = `Sinu sünnipäev: ${input.value}`;
+}
+function varv(){
+    const input = document.getElementById('input-varv');
+    const vastus = document.getElementById('lemmik-varv-container');
+    vastus.style.color = input.value;
+    vastus.innerText = "Sinu lemmik varv" + ": " + input.value;
 
+}
+function fail(){
+    const failInput = document.getElementById('input-file');
+    console.log(failInput.value);
+    const vastus = document.getElementById('fail-tabelist-container');
+    vastus.innerText = `sinu faili path on ${failInput.value}`;
+}
+function salasona(){
+    const input = document.getElementById('input-password');
+    const vastus = document.getElementById('salasona-tabelist-container');
+
+    vastus.innerText = `Sinu salasona on ${'********'}`;
+    alert(input.value + " =)");
+}
+function clear(){
+    console.log(123);
+    const vastus = document.getElementById('nimi-tabelist-container');
+    const vastus2 = document.getElementById('ruhm-tabelist-container');
+    const vastus3 = document.getElementById('keel-tabelist-container');
+    const vastus4 = document.getElementById('sunnipaev-tabelist-container');
+    const vastus5 = document.getElementById('lemmik-varv-container');
+    const vastus6 = document.getElementById('fail-tabelist-container');
+    const vastus7 = document.getElementById('salasona-tabelist-container');
+    const vastused = [vastus, vastus2, vastus3, vastus4, vastus5, vastus6, vastus7];
+
+    vastused.forEach(vastus => {
+        console.log(vastus);
+        vastus.innerText = "";
+    })
+
+}

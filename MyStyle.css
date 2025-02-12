@@ -12,6 +12,10 @@ table {
 table tr td {
     border: 1px solid black;
 }
+table tr td:hover{
+    background-color: lightgray;
+    border-radius: 20px;
+}
 .body-container{
     display: flex;
     justify-content: center;
