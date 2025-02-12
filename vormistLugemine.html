@@ -4,53 +4,128 @@
     <meta charset="UTF-8">
     <title>Vormist lugemine</title>
   <script src="MyScript.js"></script>
+  <link rel="stylesheet" href="MyStyle.css">
 </head>
 <body>
+<div class="body-container">
+
+
 <h1>JS : Vormist lugemine</h1>
-<form name="vorm1">
-  <label for="nimi">Sisesta oma nimi : </label>
-  <input type="text" name="nimi" id="nimi" placeholder="Eesnimi" oninput="tervitus()">
+<table>
+  <thead>
+    <tr>
+      <th>Küsimused</th>
+      <th>Vastused</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <form name="vorm1">
+          <label for="nimi">Sisesta oma nimi : </label><br>
+          <input type="text" name="nimi" id="nimi" placeholder="Eesnimi" oninput="tervitus()"><br><br>
+          <button>OK</button>
+        </form>
+      </td>
+      <td>
+        <div id="nimi-tabelist-container">
 
-  <br>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Vali oma rühm:</strong><br>
+        <input type="radio" name="ryhm" id="tarpv23" value="TARpv23" onclick="tervitus()">
+        <label for="tarpv23">TARpv23</label><br>
 
-  <strong>Vali oma rühm:</strong>
-    <input type="radio" name="ryhm" id="tarpv23" value="TARpv23" onclick="tervitus()">
-    <label for="tarpv23">TARpv23</label><br>
+        <input type="radio" name="ryhm" id="tarpv24" value="TARpv24" onclick="tervitus()">
+        <label for="tarpv24">TARpv24</label><br>
 
-    <input type="radio" name="ryhm" id="tarpv24" value="TARpv24" onclick="tervitus()">
-    <label for="tarpv24">TARpv24</label><br>
+        <input type="radio" name="ryhm" id="logitpv23" value="LOGITpv23" onclick="tervitus()">
+        <label for="logitpv23">LOGITpv23</label><br>
 
-    <input type="radio" name="ryhm" id="logitpv23" value="LOGITpv23" onclick="tervitus()">
-    <label for="logitpv23">LOGITpv23</label><br>
+        <input type="radio" name="ryhm" id="logitpv24" value="LOGITpv24" onclick="tervitus()">
+        <label for="logitpv24">LOGITpv24</label><br><br>
+        <button>OK</button>
+      </td>
+      <td>
+        <div id="ruhm-tabelist-container">
 
-    <input type="radio" name="ryhm" id="logitpv24" value="LOGITpv24" onclick="tervitus()">
-    <label for="logitpv24">LOGITpv24</label>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Mis keeled sa oled õppinud?</strong><br>
+        <input type="checkbox" name="python" id="python" value="python" onclick="tervitus()">
+        <label for="python">Python</label><br>
 
-  <br>
+        <input type="checkbox" name="html" id="html" value="html" onclick="tervitus()">
+        <label for="html">HTML</label><br>
 
-  <strong>Mis keeled sa oled õppinud?</strong>
-    <input type="checkbox" name="python" id="python" value="python" onclick="tervitus()">
-    <label for="python">Python</label><br>
+        <input type="checkbox" name="csharp" id="csharp" value="csharp" onclick="tervitus()">
+        <label for="csharp">C Sharp#</label><br>
 
-    <input type="checkbox" name="html" id="html" value="html" onclick="tervitus()">
-    <label for="html">HTML</label><br>
+        <input type="checkbox" name="java" id="java" value="java" onclick="tervitus()">
+        <label for="java">Java</label><br>
 
-    <input type="checkbox" name="csharp" id="csharp" value="csharp" onclick="tervitus()">
-    <label for="csharp">C Sharp#</label><br>
+        <input type="checkbox" name="css" id="css" value="css" onclick="tervitus()">
+        <label for="css">CSS</label><br><br>
+        <button>OK</button>
+      </td>
+      <td>
+        <div id="keel-tabelist-container">
 
-    <input type="checkbox" name="java" id="java" value="java" onclick="tervitus()">
-    <label for="java">Java</label><br>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Millal sinu sünnipäev on?</strong><br>
+        <input id="input-date" type="date"><br><br>
+        <button>OK</button>
+      </td>
+      <td>
+        <div id="sunnipaev-tabelist-container">
 
-    <input type="checkbox" name="css" id="css" value="css" onclick="tervitus()">
-    <label for="css">CSS</label>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Mis on sinu lemmik värv?</strong><br>
+        <input type="color" id="input-varv"><br><br>
+        <button>OK</button>
+      </td>
+      <td>
+        <div id="lemmik-varv-container">
 
-  <br>
-  <input type="button" value="OK" onclick="tervitus2()">
-  <div id="vastus"></div>
-  <br>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Vali midagi</strong><br>
+        <input type="file" id="input-file"><br><br>
+        <button>OK</button>
+      </td>
+      <td>
+        
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <strong>Sisesta oma parool, пж пж пж пж</strong><br>
+        <input type="password" name="" id="input-password"><br><br>
+        <button>OK</button>
+      </td>
+      <td>
 
-
-</form>
-
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
 </body>
 </html>
