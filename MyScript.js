@@ -59,8 +59,7 @@ function salasona(){
     vastus.innerText = `Sinu salasona on ${'********'}`;
     alert(input.value + " =)");
 }
-function clear(){
-    console.log(123);
+function ku(){
     const vastus = document.getElementById('nimi-tabelist-container');
     const vastus2 = document.getElementById('ruhm-tabelist-container');
     const vastus3 = document.getElementById('keel-tabelist-container');
@@ -74,5 +73,9 @@ function clear(){
         console.log(vastus);
         vastus.innerText = "";
     })
+}
+function clear(){
+
+
 
 }
