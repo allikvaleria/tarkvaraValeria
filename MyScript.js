@@ -74,3 +74,10 @@ function tervitus2()
     vastus.innerHTML='Täna on veebirakendus tund' ;
     vastus.style.color='DarkBlue';
 }
+function validateForm() {
+    var nimi = document.forms["vorm1"]["nimi"].value;
+    if (nimi == "") {
+        alert("Nimi on kohustuslik!");
+        return false;
+    }
+}
