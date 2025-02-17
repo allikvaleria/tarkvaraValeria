@@ -1,0 +1,20 @@
+#questionnaire {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+#questionnaire th, #questionnaire td {
+    padding: 10px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+#questionnaire tr:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+@media (max-width: 600px) {
+    #questionnaire th, #questionnaire td {
+        font-size: 14px;
+    }
+}
