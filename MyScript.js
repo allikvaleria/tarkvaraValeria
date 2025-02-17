@@ -67,6 +67,10 @@ function tervitus()
     }
     vastus.innerHTML='Tere, ' + nimi.value + '<br>' + 'sa oled ' + ryhm + ' rühmas.' + '<br>' + 'Valitud keeled on - ' + keeled;
     vastus.style.color='DarkMagenta';
+
+    document.getElementById('nameAnswer').innerText = nimi.value;
+    document.getElementById('groupAnswer').innerText = ryhm;
+    document.getElementById('languagesAnswer').innerText = keeled;
 }
 function tervitus2()
 {
