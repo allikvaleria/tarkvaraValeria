@@ -72,11 +72,10 @@ function tervitus()
     document.getElementById('groupAnswer').innerText = ryhm;
     document.getElementById('languagesAnswer').innerText = keeled;
 }
-function tervitus2()
-{
-    let vastus=document.getElementById('vastus');
-    vastus.innerHTML='Täna on veebirakendus tund' ;
-    vastus.style.color='DarkBlue';
+function tervitus2() {
+    let vastus = document.getElementById('vastus');
+    vastus.innerHTML = 'Küsimustik täidetud';
+    vastus.style.color = 'DarkBlue';
 }
 function validateForm() {
     var nimi = document.forms["vorm1"]["nimi"].value;
