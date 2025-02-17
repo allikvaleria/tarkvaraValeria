@@ -26,6 +26,7 @@
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "DavidMyrseth",
+    "last_opened_file_path": "C:/Users/opilane/Desktop/tarkvaraValeria/Pictures",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -34,6 +35,11 @@
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\opilane\Desktop\tarkvaraValeria\Pictures" />
+    </key>
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -49,7 +55,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1739785476284</updated>
-      <workItem from="1739785478008" duration="1152000" />
+      <workItem from="1739785478008" duration="2124000" />
     </task>
     <servers />
   </component>

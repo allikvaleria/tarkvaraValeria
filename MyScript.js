@@ -84,3 +84,15 @@ function validateForm() {
         return false;
     }
 }
+//Добавление изображения, при нажатии на которое появляется текстовое поле
+function kuvaTekst() {
+    let area = document.getElementById('tekstiala');
+    if (!area) {
+        area = document.createElement('textarea');
+        area.id = 'tekstiala';
+        area.placeholder = 'Sisesta tekst siia...';
+        document.body.appendChild(area);
+    } else {
+        area.style.display = (area.style.display === 'none' || area.style.display === '') ? 'block' : 'none';
+    }
+}
