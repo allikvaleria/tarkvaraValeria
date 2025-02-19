@@ -1,5 +1,6 @@
 
 function nimi(){
+    
     const vastus = document.getElementById('nimi-tabelist-container');
     const input = document.getElementById('nimi');
     if(input.value === ""){
@@ -7,8 +8,10 @@ function nimi(){
         return;
     }
     vastus.innerHTML=`tere, ${input.value}`;
+    alert("Küsimustik täidetud");
 }
 function ruhm(){
+    
     const vastus = document.getElementById('ruhm-tabelist-container');
     const radiobuttons = document.getElementsByName('ryhm');
     let access = true;
@@ -22,8 +25,10 @@ function ruhm(){
     if(access){
         alert("Vali oma ryhm");
     }
+    alert("Küsimustik täidetud");
 }
 function keeled(){
+    
     const checkboxes = document.getElementsByName('keel');
     const vastus = document.getElementById('keel-tabelist-container');
     let text = "Sa oled õpinnud -"
@@ -33,24 +38,28 @@ function keeled(){
         }
     })
     vastus.innerHTML=text;
+    alert("Küsimustik täidetud");
 }
 function date(){
+    
     const input = document.getElementById('input-date');
     const vastus = document.getElementById('sunnipaev-tabelist-container');
     vastus.innerText = `Sinu sünnipäev: ${input.value}`;
+    alert("Küsimustik täidetud");
 }
 function varv(){
     const input = document.getElementById('input-varv');
     const vastus = document.getElementById('lemmik-varv-container');
     vastus.style.color = input.value;
     vastus.innerText = "Sinu lemmik varv" + ": " + input.value;
-
+    alert("Küsimustik täidetud");
 }
 function fail(){
     const failInput = document.getElementById('input-file');
     console.log(failInput.value);
     const vastus = document.getElementById('fail-tabelist-container');
     vastus.innerText = `sinu faili path on ${failInput.value}`;
+    alert("Küsimustik täidetud");
 }
 function salasona(){
     const input = document.getElementById('input-password');
@@ -58,6 +67,7 @@ function salasona(){
 
     vastus.innerText = `Sinu salasona on ${'********'}`;
     alert(input.value + " =)");
+    alert("Küsimustik täidetud");
 }
 function ku(){
     const vastus = document.getElementById('nimi-tabelist-container');
@@ -73,6 +83,7 @@ function ku(){
         console.log(vastus);
         vastus.innerText = "";
     })
+    alert("Küsimustik täidetud");
 }
 function clear(){
 
