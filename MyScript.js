@@ -85,8 +85,13 @@ function ku(){
     })
     alert("Küsimustik täidetud");
 }
-function clear(){
-
-
-
+let accessPilt = true;
+function textarea(){
+    if(accessPilt){
+        accessPilt = false;
+        const textarea = document.createElement("textarea")
+        const textareaContainer = document.getElementById("textarea-container");
+        textareaContainer.appendChild(textarea)
+    }
+    
 }
